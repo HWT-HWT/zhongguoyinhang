@@ -1,0 +1,234 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index"
+		},
+		{
+			"path": "pages/card/card"
+		},
+		{
+			"path": "pages/wealth/wealth"
+		},
+		{
+			"path": "pages/live/live"
+		},
+		{
+			"path": "pages/user/user"
+		},
+		{
+			"path" : "pages/login/login"
+		},
+		{
+			"path" : "pages/gesture/gesture",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/loan/loan",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/Repayment/Repayment",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/Account/Account",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/TransactionDetails/TransactionDetails",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/assets/assets",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/LoanDatali/LoanDatali",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/CreditDetails/CreditDetails",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/debt/debt",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/debtStep/debtStep",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/paymentHistory/paymentHistory",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/transfer/transfer",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/AccountTransfer/AccountTransfer",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/drawMoney/drawMoney",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/ApplicationStatus/ApplicationStatus",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/LimitInquiry/LimitInquiry",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/LoanRecords/LoanRecords",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/FlowRrinting/FlowRrinting",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/PrintApplication/PrintApplication",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/PaymentRecords/PaymentRecords",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/contract/contract",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/more/more",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/LoanDataliTow/LoanDataliTow",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		}
+		
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"navigationStyle": "custom"
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"iconWidth": "50rpx",
+		"fontSize": "25rpx",
+		"selectedColor": "#dc0034",
+		// #ifdef APP  
+			"iconWidth": "30",
+			"fontSize": "12",
+		// #endif 
+		
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "static/boc_home_tab_gray.png",
+				"selectedIconPath": "static/boc_home_tab_red.png"
+			},
+			{
+				"pagePath": "pages/card/card",
+				"text": "信用卡",
+				"iconPath": "static/boc_crcd_tab_gray.png",
+				"selectedIconPath": "static/boc_crcd_tab_red.png"
+			},
+			{
+				"pagePath": "pages/wealth/wealth",
+				"text": "财富",
+				"iconPath": "static/boc_invest_tab_gray.png",
+				"selectedIconPath": "static/boc_invest_tab_red.png"
+			},
+			{
+				"pagePath": "pages/live/live",
+				"text": "生活",
+				"iconPath": "static/boc_life_tab_gray.png",
+				"selectedIconPath": "static/boc_life_tab_red.png"
+			},
+			{
+				"pagePath": "pages/user/user",
+				"text": "我的",
+				"iconPath": "static/boc_personal_tab_gray.png",
+				"selectedIconPath": "static/boc_personal_tab_red.png"
+			}
+		]
+	}
+}
