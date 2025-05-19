@@ -50,8 +50,8 @@
 				TitleImage:"../../static/back_black.png",
 				rigthIcon:['../../static/boc_folder_title_service.png','../../static/icon_share_black.png'],
 				LoanRecordsList:[
-					{title:'个人经营贷款',NextDate:'2025/04/03',Date:'2023/03/17',NextMoney:'3,047.12',Money:'500,000.00'},
-					{title:'中银E贷·经营贷',NextDate:'2025/04/03',Date:'2023/03/13',NextMoney:'6,259.82',Money:'600,000.00'},
+					{title:'随心智贷',NextDate:'2025/04/03',Date:'2024/11/13',NextMoney:'3,047.12',Money:'200,000.00'},
+					{title:'中银E贷·经营贷',NextDate:'2025/04/03',Date:'2024/11/08',NextMoney:'6,259.82',Money:'900,000.00'},
 				]
 			};
 		},

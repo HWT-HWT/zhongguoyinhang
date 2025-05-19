@@ -31,8 +31,8 @@
 			<view class="Notice-Text">
 				<image src="@/static/notice-bg-1.png" mode=""></image>
 				<view class="">
-					<p>一图看懂!中小学幼儿园开学提</p>
-					<p>醒“六要”“六不”</p>
+					<p>【2024年平均工资出炉】中银资</p>
+					<p>产配置日报20250519</p>
 				</view>
 			</view>
 			<image class="IconRight" src="@/static/arrow_white.png" mode=""></image>
@@ -260,7 +260,7 @@
 	export default {
 		data() {
 			return {
-				IconView:['扫一扫','收付款','转账','账户管理'],
+				IconView:['扫一扫','活钱宝','转账','账户管理'],
 				ViewList:[
 					{name:'活钱宝',icon:'../../static/ListView-icon-6.png'},
 					{name:'账号转账',icon:'../../static/ListView-icon-4.png'},
@@ -304,34 +304,37 @@
 			
 		},
 		onPageScroll(Scroll) {
+			// 获取页面滚动值
 			this.ScrollTop = Scroll.scrollTop
 		},
 		methods:{
 			getAccount(){
+				// 获取登录信息
 				this.token = uni.getStorageSync('account')
 			},
 			Next(index){
+				// 跳转贷款页面
 				index === 4 ? uni.navigateTo({
 					url:'/pages/loan/loan'
 				}) : ''
 			},
 			IconViewIndex(index){
 				console.log(index);
+				// 跳转转账页面
 				index === 2 ? uni.navigateTo({
 					url:'/pages/transfer/transfer'
 				}):''
 			}
 		},
 		created(){
-			
+			// 调用登录
 			this.getAccount()
 		},
-		onShow() {
-			console.log(uni.getStorageSync('account')==='');
-			this.getAccount()
-		},
-		
-			
+		// onShow() {
+		// 	// 退出登录
+		// 	uni.getStorageSync('account') === ''
+		// 	this.getAccount()
+		// },
 	}
 </script>
 
@@ -340,7 +343,7 @@
 		width: 100vw;
 		padding-bottom: 50rpx;
 		background: url('../../static/index-bg-1.png') no-repeat;
-		background-size:100% 600rpx;
+		background-size:100% 500rpx;
 		.index-Scroll-Title{
 			background-color: #fff;
 			position: fixed;
@@ -373,7 +376,7 @@
 		}
 		.index-ListView{
 			margin: 0 auto;
-			margin-top: 250rpx;
+			margin-top: 130rpx;
 			background-color: #fff;
 		}
 		.index-Notice{

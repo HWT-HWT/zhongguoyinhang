@@ -34,8 +34,9 @@
 			return {
 				TitleImage:"../../static/back_black.png",
 				rigthIcon:['../../static/boc_folder_title_service.png','../../static/icon_share_black.png'],
-				Eye:false
+				Eye:false,
 			};
+			
 		},
 		components:{
 			loanTitleVue,

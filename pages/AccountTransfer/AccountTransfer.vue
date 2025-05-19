@@ -6,12 +6,9 @@
 		<view class="repayment-Account">
 			<p>交易账户</p>
 			<view class="image-text">
-				6216 ****** 9190 
+				6216 ****** 6429 
 				<image src="../../static/upsdk_payment_right.webp" mode=""></image> 
 			</view>
-		</view>
-		<view class="">
-			
 		</view>
 	</view>
 </template>

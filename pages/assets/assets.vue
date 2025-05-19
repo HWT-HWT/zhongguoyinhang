@@ -13,7 +13,7 @@
 			<image v-else src="@/static/assets_eye_open.png" mode="" @click="ClickEye"></image>
 		</view>
 		<view class="assets-Date">
-			2025/03/06 13:06:28 <image src="@/static/boc_reload.png" mode=""></image>
+			{{oldTime}}<image src="@/static/boc_reload.png" mode=""></image>
 		</view>
 		<view class="assets-Money">
 			<view class="Row Select">
@@ -22,7 +22,7 @@
 			</view>
 			<view class="Row" style="border: none;">
 				<p>总负债</p>
-				<span>{{Eye ? '******': '1,058,600.00'}}</span>
+				<span>{{Eye ? '******': '1,100,000.00'}}</span>
 			</view>
 		</view>
 		<view class="assets-Chatting">
@@ -108,7 +108,8 @@
 				TitleImage:"../../static/back_black_white.png",
 				rigthIcon:['../../static/boc_folder_title_white_service.png','../../static/icon2.png'],
 				Eye:true,
-				Scroll:0
+				Scroll:0,
+				oldTime:''
 			};
 		},
 		components:{
@@ -123,6 +124,9 @@
 		},
 		onPageScroll(Scroll) {
 			this.Scroll = Scroll.scrollTop
+		},
+		created() {
+			this.oldTime = uni.getStorageSync('OldDate')
 		}
 	}
 </script>

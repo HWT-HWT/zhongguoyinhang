@@ -1,25 +1,13 @@
 <template>
 	<view class="drawMoney">
 		<view class="drawMoney-tbas">
-			<loanTitleVue name="中银E贷·经营贷" :TitleImage='TitleImage' :rigthIcon='rigthIcon'></loanTitleVue>
-		</view>
-		<view class="drawMoney-Title-text">
-			<view class="drawMoney-title">
-				惠如愿·E抵贷
-			</view>
-			<view class="drawMoney-Number">
-				贷款额度号 PF446330000020201608283
-			</view>
+			<loanTitleVue name="随心智贷" :TitleImage='TitleImage' :rigthIcon='rigthIcon'></loanTitleVue>
 		</view>
 		<view class="drawMoney-ListView">
 			<view class="ListView-text">
 				<p>可用额度(元)</p>
-				<view class="money">0.00</view>
-				<view class="date">2034/10/25到期 年化利率3.36%起 <image src="@/static/boc_finance_gray_help.png" mode=""></image> </view>
-			</view>
-			<view class="ListView-btn">
-				<span>用款</span>
-				<span style="border: none;" @click="Next()">更多</span>
+				<view class="money">0.<span>00</span> </view>
+				<view class="date">年利率(单利)3.4% <image src="@/static/boc_finance_gray_help.png" mode=""></image> | 2027/11/08到期 </view>
 			</view>
 		</view>
 		<view class="drawMoney-bill">
@@ -52,7 +40,7 @@
 		data() {
 			return {
 				TitleImage:"../../static/back_black.png",
-				rigthIcon:['../../static/boc_folder_title_service.png'],
+				rigthIcon:['../../static/boc_folder_title_service.png','../../static/icon_share_black.png'],
 			};
 		},
 		components:{
@@ -107,10 +95,10 @@
 				align-items: center;
 				flex-wrap: wrap;
 				justify-content: center;
-				border-bottom:1px solid #ddd ;
-				padding-bottom: 20rpx;
+				// border-bottom:1px solid #ddd ;
+				padding: 40rpx 0;
 				p{
-					font-size: 32rpx;
+					font-size: 25rpx;
 				}
 				.money{
 					text-align: center;
@@ -118,16 +106,20 @@
 					font-size: 60rpx;
 					font-weight: bold;
 					margin: 20rpx auto;
-					color: #daa969;
+					// color: #daa969;
+					span{
+						font-size: 45rpx;
+					}
 				}
 				.date{
-					font-size: 32rpx;
+					font-size: 28rpx;
 					display: flex;
 					align-items: center;
 					image{
 						width: 30rpx;
 						height: 30rpx;
-						margin-left: 10rpx;
+						margin:0 10rpx;
+						margin-top: 10rpx;
 					}
 				}
 			}

@@ -32,8 +32,8 @@
 			return {
 				TitleImage:"../../static/back_black.png",
 				LimitInquiryList:[
-					{date:'12月/2027',MiniDate:'23',week:'周四',title:'个人经营贷款',Money:'人民币元 500,000.00'},
-					{date:'12月/2032',MiniDate:'05',week:'周日',title:'中银E贷·经营贷',Money:'人民币元 600,000.00'},
+					{date:'11月/2027',MiniDate:'08',week:'周一',title:'随心智贷',Money:'人民币元 200,000.00'},
+					{date:'10月/2034',MiniDate:'25',week:'周三',title:'中银E贷·经营贷',Money:'人民币元 900,000.00'},
 				]
 			};
 		},

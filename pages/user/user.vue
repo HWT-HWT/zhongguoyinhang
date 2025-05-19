@@ -15,15 +15,15 @@
 		<view class="user-header">
 			<image src="@/static/fuzai_icon_default_setting.png" mode=""></image>
 			<view class="header-text">
-				<p>下午好 , 魏*斌</p>
+				<p>下午好 , 马*超</p>
 				<span>上次登录:{{date}}</span>
 			</view>
 		</view>
 		<view class="user-ToDoList">
 			<view class="ToDoImage">
 				<image src="@/static/bg_mine_todo.png" mode=""></image>
-				<view class="Sum">
-					14
+				<view class="Sum" style="width: 35rpx;">
+					2
 				</view>
 			</view>
 			<view class="ToDoText">
@@ -48,11 +48,11 @@
 			<view class="MyAssets-View">
 				<view class="Row">
 					<view class="ListView" @click="GoAssets">资产 <image src="@/static/upsdk_payment_right.webp" mode=""></image> </view>
-					<span>{{MyAssetsEye ? '******' : '3.06'}}</span>
+					<span>{{MyAssetsEye ? '******' : '2.00'}}</span>
 				</view>
 				<view class="Row">
 					<view class="ListView">昨日收益 <image src="@/static/upsdk_payment_right.webp" mode=""></image> </view>
-					<span>{{MyAssetsEye ? '******' : '0.00'}}</span>
+					<span>{{MyAssetsEye ? '******' : '暂无收益'}}</span>
 				</view>
 			</view>
 		</view>
@@ -74,6 +74,19 @@
 				</view>
 			</view>
 		</view>
+		<view class="user-Outlets-title">
+			<TitleVue LFontSize="38" :icon="true" IconSize="2">
+				<template #left>
+					我的贷款
+				</template>
+			</TitleVue>
+		</view>
+		
+		<view class="user-Outlets-loan">
+			<view class="p">贷款本金总余额(人民币元) <image src="@/static/boc_finance_gray_help.png" mode=""></image> </view>
+			<span>1,100,000.00</span>
+		</view>
+		
 		<view class="user-Outlets-title">
 			<TitleVue LFontSize="38" :icon="true" IconSize="2">
 				<template #left>
@@ -150,7 +163,7 @@
 				IconBlack:'../../static/boc_en_logout_gray.png',
 				ScrollTop:0,
 				UserList:[
-					{name:'我的账户',num:'2'},
+					{name:'我的账户',num:'1'},
 					{name:'我的权益',num:'5'},
 					{name:'我的积分',icon:'../../static/user-icon-1.png'},
 					{name:'我的游戏',icon:'../../static/user-icon-2.png'}
@@ -331,6 +344,38 @@
 		.user-Outlets-title{
 			width: 90%;
 			margin: 0 auto;
+		}
+		.user-Outlets-loan{
+			width: 80%;
+			margin: 0 auto;
+			margin-top: 20rpx;
+			background: url('@/static/user-loan-1.png');
+			display: flex;
+			flex-wrap: wrap;
+			padding:30rpx 40rpx;
+			align-items: center;
+			justify-content: center;
+			font-size: 28rpx;
+			border-radius:20rpx; 
+			border: 1px solid #ddd;
+			.p{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				text-align: center;
+				image{
+					width: 28rpx;
+					height: 28rpx;
+					margin-top: 10rpx;
+					margin-left: 10rpx;
+				}
+			}
+			span{
+				font-weight: bold;
+				font-size: 38rpx;
+				margin-top: 10rpx;
+			}
 		}
 		.user-Outlets{
 			width: 80%;

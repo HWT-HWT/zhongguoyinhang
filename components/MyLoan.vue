@@ -15,7 +15,7 @@
 					<image src="../static/boc_finance_eye_open.png" mode="" v-if="Eye"></image>
 					<image src="../static/boc_finance_eye_close.png" mode="" v-else></image>
 				</view>
-				<span>{{Eye ? '1,058,600.00' :'******' }}</span>
+				<span>{{Eye ? '1,100,000.00' :'******' }}</span>
 			</view>
 		</view>
 		
@@ -23,8 +23,8 @@
 			<view class="ListView-Text" @click="GoNext(index)">
 				<view class="ListView-title">
 					<p>{{item.title}}</p>
-					<p class="SubTitle" v-if="item.isTrue" >贷款余额(人民币元)</p>
-					<p class="isTrue" v-if="item.isTrue" >{{Eye ? '458,600.00' :'******' }}</p>
+					<!-- <p class="SubTitle" v-if="item.isTrue" >贷款余额(人民币元)</p>
+					<p class="isTrue" v-if="item.isTrue" >{{Eye ? '458,600.00' :'******' }}</p> -->
 				</view>
 				<view class="ListView-content" v-for="(sum,num) in item.list" :key="num">
 					<span>{{sum.name}}</span> <p>{{sum.num}}</p>
@@ -67,7 +67,7 @@
 		data() {
 			return {
 				TitleImage:"../../static/back_black.png",
-				rigthIcon:['../../static/boc_folder_title_service.png'],
+				rigthIcon:['../../static/boc_folder_title_service.png','../../static/icon_share_black.png'],
 				ServiceList:[
 					{name:'贷款资金转出',icon:'../../static/MyLoan-icon-1.png'},
 					{name:'在线签约',icon:'../../static/MyLoan-icon-2.png'},
@@ -89,28 +89,39 @@
 				],
 				MyLoanListView:[
 					{	
+						id:2,
+						title:'随心智贷',
+						list:[
+							{name:'贷款金额',num:'人民币元 200,000.00'},
+							{name:'可用额度',num:'人民币元 0.00'},
+							{name:'贷款到期日',num:'2027/11/08'},
+						],
+						isTrue:true,
+						btn:['还款计划','额度详情']
+					},
+					{
 						id:1,
 						title:'中银E贷·经营贷(惠如愿·E抵贷)',
 						list:[
-							{name:'总额度',num:'人民币元 600,000.00'},
+							{name:'总额度',num:'人民币元 900,000.00'},
 							{name:'可用额度',num:'人民币元 0.00'},
-							{name:'额度到期日',num:'2032/12/05'}
+							{name:'额度到期日',num:'2034/10/25'}
 						],
-						btn:['立即提款','还款','额度详情']
-					},
-					{	
-						id:2,
-						title:'个人经营贷款',
-						list:[
-							{name:'贷款金额',num:'人民币元 500,000.00'},
-							{name:'贷款到期日',num:'2026/03/17'},
-							{name:'贷款执行利率',num:'3.45%'}
-						],
-						isTrue:true,
-						btn:['还款','还款计划','贷款详情']
+						btn:['还款','额度详情']
 					}
 				],
 				MyLoanListViewFalse:[
+					{
+						id:2,
+						title:'随心智贷',
+						list:[
+							{name:'贷款金额',num:'******'},
+							{name:'贷款到期日',num:'******'},
+							{name:'贷款执行利率',num:'******'}
+						],
+						isTrue:true,
+						btn:['还款计划','额度详情']
+					},
 					{	
 						id:1,
 						title:'中银E贷·经营贷(惠如愿·E抵贷)',
@@ -119,21 +130,44 @@
 							{name:'可用额度',num:'******'},
 							{name:'额度到期日',num:'******'}
 						],
-						btn:['立即提款','还款','额度详情']
-					},
-					{	
-						id:2,
-						title:'个人经营贷款',
-						list:[
-							{name:'贷款金额',num:'******'},
-							{name:'贷款到期日',num:'******'},
-							{name:'贷款执行利率',num:'******'}
-						],
-						isTrue:true,
-						btn:['还款','还款计划','贷款详情']
+						btn:['还款','额度详情']
 					}
+					
 				],
 				Eye:false,
+				CreditA:{
+					TotalBalance:'900,000.00',
+					Money:'900,000.00',
+					remaining:'0.00',
+					LoanDataliList:[
+						{name:'还款账户',text:'6216 ****** 6429',menu:'更改'},
+						{name:'还款日',text:'每月05日'},
+						{name:'年利率',text:'3.55%起'},
+						{name:'额度到期日',text:'2034/10/25'},
+						{name:'贷款额度号',text:'PF355470000046878744084'},
+						{name:'额度状态',text:'生效'},
+						{name:'贷款机构名称',text:'中国银行广州大岭支行'},
+						{name:'贷款机构地址',text:'广州市南沙区江南路110号首层、二层'},
+						{name:'贷款机构电话',text:'02084987481'},
+					],
+				},
+				CreditB:{
+					TotalBalance:'200,000.00',
+					Money:'200,000.00',
+					remaining:'0.00',
+					LoanDataliList:[
+						{name:'还款账户',text:'6216 ****** 6429',menu:'更改'},
+						{name:'还款日',text:'每月11日'},
+						{name:'年利率(单利)',text:'3.4%'},
+						{name:'额度到期日',text:'2027/11/08'},
+						{name:'贷款额度号',text:'PF533850000047334650473'},
+						{name:'额度状态',text:'生效'},
+						{name:'贷款机构名称',text:'中国银行广州大岭支行'},
+						{name:'贷款机构地址',text:'广州市南沙区江南路110号首层、二层'},
+						{name:'贷款机构电话',text:'02084987481'},
+					],
+				},
+				
 				
 			};
 		},
@@ -152,25 +186,28 @@
 		},
 		methods:{
 			ViewBtn(id,index){
+				console.log(id);
 				if(id === 1){
+					// index === 0 ? uni.navigateTo({
+					// 	url:'/pages/drawMoney/drawMoney'
+					// }) :''
+					uni.setStorageSync('Credit',this.CreditA)
 					index === 0 ? uni.navigateTo({
-						url:'/pages/drawMoney/drawMoney'
-					}) :''
-					index === 1 ? uni.navigateTo({
 						url:'/pages/Repayment/Repayment'
 					}) :''
-					index === 2 ? uni.navigateTo({
+					index === 1 ? uni.navigateTo({
 						url:'/pages/CreditDetails/CreditDetails'
 					}) :''
 				}else{
+					uni.setStorageSync('Credit',this.CreditB)
+					// index === 0 ? uni.navigateTo({
+					// 	url:'/pages/debtStep/debtStep'
+					// }) :''
 					index === 0 ? uni.navigateTo({
-						url:'/pages/debtStep/debtStep'
-					}) :''
-					index === 1 ? uni.navigateTo({
 						url:'/pages/paymentHistory/paymentHistory'
 					}) :''
-					index === 2 ? uni.navigateTo({
-						url:'/pages/LoanDatali/LoanDatali'
+					index === 1 ? uni.navigateTo({
+						url:'/pages/CreditDetails/CreditDetails'
 					}) :''
 				}
 			},
@@ -179,10 +216,10 @@
 			},
 			GoNext(index){
 				index === 0 ? uni.navigateTo({
-					url:'/pages/drawMoney/drawMoney'
+					url:'/pages/FeelFreeLoan/FeelFreeLoan'
 				}) :''
 				index === 1 ? uni.navigateTo({
-					url:'/pages/LoanDatali/LoanDatali'
+					url:'/pages/drawMoney/drawMoney'
 				}) :''
 			},
 			ClickNext(index){

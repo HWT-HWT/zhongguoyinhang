@@ -178,6 +178,13 @@
 			{
 				"navigationBarTitleText" : ""
 			}
+		},
+		{
+			"path" : "pages/FeelFreeLoan/FeelFreeLoan",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
 		}
 		
 	],
@@ -190,6 +197,7 @@
 	},
 	"uniIdRouter": {},
 	"tabBar": {
+		"backgroundColor": "#fff",
 		"iconWidth": "50rpx",
 		"fontSize": "25rpx",
 		"selectedColor": "#dc0034",
@@ -202,32 +210,32 @@
 			{
 				"pagePath": "pages/index/index",
 				"text": "首页",
-				"iconPath": "static/boc_home_tab_gray.png",
-				"selectedIconPath": "static/boc_home_tab_red.png"
+				"iconPath": "static/tabr--icon-1-2.png",
+				"selectedIconPath": "static/tabr--icon-1.png"
 			},
 			{
 				"pagePath": "pages/card/card",
 				"text": "信用卡",
-				"iconPath": "static/boc_crcd_tab_gray.png",
-				"selectedIconPath": "static/boc_crcd_tab_red.png"
+				"iconPath": "static/tabr--icon-2-2.png",
+				"selectedIconPath": "static/tabr--icon-2.png"
 			},
 			{
 				"pagePath": "pages/wealth/wealth",
 				"text": "财富",
-				"iconPath": "static/boc_invest_tab_gray.png",
-				"selectedIconPath": "static/boc_invest_tab_red.png"
+				"iconPath": "static/tabr--icon-3-2.png",
+				"selectedIconPath": "static/tabr--icon-3.png"
 			},
 			{
 				"pagePath": "pages/live/live",
 				"text": "生活",
-				"iconPath": "static/boc_life_tab_gray.png",
-				"selectedIconPath": "static/boc_life_tab_red.png"
+				"iconPath": "static/tabr--icon-4-2.png",
+				"selectedIconPath": "static/tabr--icon-4.png"
 			},
 			{
 				"pagePath": "pages/user/user",
 				"text": "我的",
-				"iconPath": "static/boc_personal_tab_gray.png",
-				"selectedIconPath": "static/boc_personal_tab_red.png"
+				"iconPath": "static/tabr--icon-5-2.png",
+				"selectedIconPath": "static/tabr--icon-5.png"
 			}
 		]
 	}

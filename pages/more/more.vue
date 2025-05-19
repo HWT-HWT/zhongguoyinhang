@@ -34,6 +34,22 @@
 		data() {
 			return {
 				TitleImage:"../../static/back_black.png",
+				CreditA:{
+					TotalBalance:'900,000.00',
+					Money:'900,000.00',
+					remaining:'0.00',
+					Credit:[
+						{name:'还款账户',text:'6216 ****** 6429',menu:'更改'},
+						{name:'还款日',text:'每月05日'},
+						{name:'年利率',text:'3.55%起'},
+						{name:'额度到期日',text:'2034/10/25'},
+						{name:'贷款额度号',text:'PF355470000046878744084'},
+						{name:'额度状态',text:'生效'},
+						{name:'贷款机构名称',text:'中国银行广州大岭支行'},
+						{name:'贷款机构地址',text:'广州市南沙区江南路110号首层、二层'},
+						{name:'贷款机构电话',text:'02084987481'},
+					],
+				},
 			};
 		},
 		components:{
@@ -41,11 +57,13 @@
 		},
 		methods:{
 			Next(){
+				
 				uni.navigateTo({
 					url:'/pages/PaymentRecords/PaymentRecords?id=1',
 				})
 			},
 			ClickGo(){
+				uni.setStorageSync('Credit',this.CreditA)
 				uni.navigateTo({
 					url:'/pages/CreditDetails/CreditDetails'
 				})

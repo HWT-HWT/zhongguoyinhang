@@ -9,7 +9,7 @@
 					姓名
 				</view>
 				<view class="rigth">
-					魏洪斌
+					马文超
 				</view>
 			</view>
 			<view class="ListView">
@@ -17,7 +17,7 @@
 					账户
 				</view>
 				<view class="rigth">
-					6013 ****** 0716
+					6013 ****** 6429
 				</view>
 			</view>
 		</view>
@@ -27,7 +27,7 @@
 					查询时段
 				</view>
 				<view class="rigth">
-					2024年/03/11 至 2025/3/10 <br>
+					2024/05/20至2025/05/19 
 					<image src="../../static/upsdk_payment_right.webp" mode=""></image>
 				</view>
 			</view>
@@ -148,6 +148,8 @@
 				}
 				.rigth{
 					text-align: right;
+					display: flex;
+					align-items: center;
 					image{
 						width: 50rpx;
 						height: 50rpx;
