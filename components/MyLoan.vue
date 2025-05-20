@@ -139,7 +139,7 @@
 					TotalBalance:'900,000.00',
 					Money:'900,000.00',
 					remaining:'0.00',
-					LoanDataliList:[
+					Credit:[
 						{name:'还款账户',text:'6216 ****** 6429',menu:'更改'},
 						{name:'还款日',text:'每月05日'},
 						{name:'年利率',text:'3.55%起'},
@@ -155,7 +155,7 @@
 					TotalBalance:'200,000.00',
 					Money:'200,000.00',
 					remaining:'0.00',
-					LoanDataliList:[
+					Credit:[
 						{name:'还款账户',text:'6216 ****** 6429',menu:'更改'},
 						{name:'还款日',text:'每月11日'},
 						{name:'年利率(单利)',text:'3.4%'},
@@ -192,6 +192,7 @@
 					// 	url:'/pages/drawMoney/drawMoney'
 					// }) :''
 					uni.setStorageSync('Credit',this.CreditA)
+					
 					index === 0 ? uni.navigateTo({
 						url:'/pages/Repayment/Repayment'
 					}) :''
@@ -204,7 +205,7 @@
 					// 	url:'/pages/debtStep/debtStep'
 					// }) :''
 					index === 0 ? uni.navigateTo({
-						url:'/pages/paymentHistory/paymentHistory'
+						url:'/pages/PaymentRecords/PaymentRecords?id=2'
 					}) :''
 					index === 1 ? uni.navigateTo({
 						url:'/pages/CreditDetails/CreditDetails'
@@ -215,6 +216,7 @@
 				this.Eye = !this.Eye
 			},
 			GoNext(index){
+					
 				index === 0 ? uni.navigateTo({
 					url:'/pages/FeelFreeLoan/FeelFreeLoan'
 				}) :''

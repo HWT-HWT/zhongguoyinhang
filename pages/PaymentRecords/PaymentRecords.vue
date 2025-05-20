@@ -18,13 +18,25 @@
 		</view>
 		
 		<view v-else>
-			<view class="assets-Datali" @click="Next()">
+			<view class="assets-Datali" @click="Next()" v-if='this.id == 1'>
 				<view class="Row">
-					<view class="p">2023/03/13用款</view>
-					<span class="none">600,000.00</span>
+					<view class="p">2024/11/08用款</view>
+					<span class="none">900,000.00</span>
 				</view>
 				<view class="Row" style="border: none;">
-					<view class="p">2025/04/03应还</view>
+					<view class="p">2025/06/08应还</view>
+					<span  class="none">6,259.82</span>
+				</view>
+				<image class="image" src="../../static/upsdk_payment_right.webp" mode=""></image>
+			</view>
+			
+			<view class="assets-Datali" @click="Next()" v-if='this.id == 2'>
+				<view class="Row">
+					<view class="p">2024/11/13用款</view>
+					<span class="none">200,000.00</span>
+				</view>
+				<view class="Row" style="border: none;">
+					<view class="p">2025/06/08应还</view>
 					<span  class="none">6,259.82</span>
 				</view>
 				<image class="image" src="../../static/upsdk_payment_right.webp" mode=""></image>
@@ -51,7 +63,7 @@
 			loanTitleVue
 		},
 		onLoad(query) {
-			this.id = query.id ? true : false
+			this.id = query.id 
 			console.log(this.id);
 		},
 		methods:{

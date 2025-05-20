@@ -12,11 +12,11 @@
 				<p>变更还款账户</p>
 				<image src="../../static/upsdk_payment_right.webp" mode=""></image>
 			</view>
-			<view class="more-list">
+			<view class="more-list"  @click="Next(1)">
 				<p>提前还款</p>
 				<image src="../../static/upsdk_payment_right.webp" mode=""></image>
 			</view>
-			<view class="more-list" @click="Next()">
+			<view class="more-list" @click="Next(2)">
 				<p>用款记录</p>
 				<image src="../../static/upsdk_payment_right.webp" mode=""></image>
 			</view>
@@ -56,11 +56,13 @@
 			loanTitleVue
 		},
 		methods:{
-			Next(){
-				
-				uni.navigateTo({
+			Next(id){
+				id === 1 ? uni.navigateTo({
+					url:'/pages/Repayment/Repayment',
+				}) : ''
+				id === 2 ? uni.navigateTo({
 					url:'/pages/PaymentRecords/PaymentRecords?id=1',
-				})
+				}) : ''
 			},
 			ClickGo(){
 				uni.setStorageSync('Credit',this.CreditA)

@@ -262,8 +262,8 @@
 			return {
 				IconView:['扫一扫','活钱宝','转账','账户管理'],
 				ViewList:[
-					{name:'活钱宝',icon:'../../static/ListView-icon-6.png'},
 					{name:'账号转账',icon:'../../static/ListView-icon-4.png'},
+					{name:'手机号转账',icon:'../../static/ListView-icon-11.png'},
 					{name:'基金',icon:'../../static/ListView-icon-7.png'},
 					{name:'理财',icon:'../../static/ListView-icon-5.png'},
 					{name:'贷款',icon:'../../static/ListView-icon-2.png'},
@@ -313,6 +313,12 @@
 				this.token = uni.getStorageSync('account')
 			},
 			Next(index){
+				index === 0 ? uni.navigateTo({
+					url:'/pages/AccountTransfer/AccountTransfer'
+				}) : ''
+				index === 1 ? uni.navigateTo({
+					url:'/pages/transferPhone/transferPhone'
+				}) : ''
 				// 跳转贷款页面
 				index === 4 ? uni.navigateTo({
 					url:'/pages/loan/loan'
@@ -323,6 +329,9 @@
 				// 跳转转账页面
 				index === 2 ? uni.navigateTo({
 					url:'/pages/transfer/transfer'
+				}):''
+				index === 3 ? uni.navigateTo({
+					url:'/pages/AccountOverview/AccountOverview'
 				}):''
 			}
 		},

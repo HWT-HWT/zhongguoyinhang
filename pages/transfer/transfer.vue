@@ -29,18 +29,18 @@
 		<view class="transfer-Account-Datali">
 			<view>
 				<image src="@/static/transfer-Account-Datali-1.png" mode=""></image>
-				<span>我的账户(5)</span>
+				<span>我的账户(1)</span>
 			</view>
 			<image class="bottom" src="@/static/bottom-3.png" mode=""></image>
 		</view>
-		<view class="transfer-Account-Name">
+	<!-- 	<view class="transfer-Account-Name">
 			<image src="../../static/boc_logo.png" mode=""></image>
 			尾号 0716 长城电子借记卡
 		</view>
 		<view class="transfer-Account-Name">
 			<image src="../../static/boc_logo.png" mode=""></image>
 			尾号 0716 长城电子借记卡
-		</view>
+		</view> -->
 	</view>
 </template>
 
@@ -70,7 +70,9 @@
 				index === 0 ? uni.navigateTo({
 					url:'/pages/AccountTransfer/AccountTransfer'
 				}) : ''
-				
+				index === 1 ? uni.navigateTo({
+					url:'/pages/transferPhone/transferPhone'
+				}) : ''
 			}
 		}
 	}
@@ -142,6 +144,7 @@
 			
 			.bottom{
 				width: 40rpx;
+				transform: scale(-1);
 				height: 40rpx;
 			}
 		}

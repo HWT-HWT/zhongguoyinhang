@@ -18,7 +18,7 @@
 				<view class="date">2034/10/25到期 年化利率3.36%起 <image src="@/static/boc_finance_gray_help.png" mode=""></image> </view>
 			</view>
 			<view class="ListView-btn">
-				<span>用款</span>
+				<!-- <span>用款</span> -->
 				<span style="border: none;" @click="Next()">更多</span>
 			</view>
 		</view>
@@ -133,7 +133,7 @@
 			}
 			.ListView-btn{
 				display: flex;
-				justify-content: space-between;
+				justify-content: center;
 				align-items: center;
 				margin-top: 20rpx;
 				span{

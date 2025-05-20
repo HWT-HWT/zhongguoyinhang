@@ -1,44 +1,37 @@
 <template>
 	<view class="AccountTransfer">
 		<view class="transfer-topTitle">
-			<loanTitleVue :TitleImage='TitleImage' :rigthIcon='rigthIcon' name="账号转账"  ></loanTitleVue>
+			<loanTitleVue :TitleImage='TitleImage' :rigthIcon='rigthIcon' name="手机号转账"  ></loanTitleVue>
+		</view>
+		<view class="AccountTransfer-ListView">
+			<view class="AccountTransfer-list">
+				<p>收款人手机号</p>
+				<input type="text" placeholder="请输入" />
+				<view class="icon">
+					<image src="@/static/AccountTransfer-icon-3.png" mode=""></image>
+					<p>通讯录</p>
+				</view>
+			</view>
+			<view class="AccountTransfer-list" style="border: none;">
+				<p>收款账户</p>
+				<input type="text" placeholder="请输入真实姓名" />
+				<view class="icon">
+					
+				</view>
+			</view>
 		</view>
 		<view class="repayment-Account">
 			<p>交易账户</p>
 			<view class="image-text">
-				6216 ****** 6429 
+				非必选
 				<image src="../../static/upsdk_payment_right.webp" mode=""></image> 
-			</view>
-		</view>
-		<view class="AccountTransfer-money">可用余额: <text>人民币元 0.00</text></view>
-		<view class="repayment-Type">
-			<p>币种</p>
-			<view class="image-text">
-				人民币元
 			</view>
 		</view>
 		<view class="AccountTransfer-Number">
 			<p>转账金额</p>
 			<input type="text" placeholder="请输入"/>
 		</view>
-		<view class="AccountTransfer-ListView">
-			<view class="AccountTransfer-list">
-				<p>收款人名称</p>
-				<input type="text" placeholder="请输入" />
-				<view class="icon">
-					<image src="@/static/AccountTransfer-icon-1.png" mode=""></image>
-					<p>收款人</p>
-				</view>
-			</view>
-			<view class="AccountTransfer-list" style="border: none;">
-				<p>收款账户</p>
-				<input type="text" placeholder="请输入" />
-				<view class="icon">
-					<image src="@/static/AccountTransfer-icon-2.png" mode=""></image>
-					<p>拍照</p>
-				</view>
-			</view>
-		</view>
+		
 		<view class="AccountTransfer-ListView">
 			<view class="AccountTransfer-list">
 				<p>附言</p>
@@ -47,14 +40,15 @@
 					
 				</view>
 			</view>
-			<view class="AccountTransfer-list" style="border: none;">
-				<p>预约执行</p>
-				<text></text>
-				<view class="icon" style="width: 15%;">
-					<image style="width: 100%; height: 60rpx;" src="@/static/application-bg-2.png" mode=""></image>
+			<view class="repayment-Account">
+				<p>付款账号</p>
+				<view class="image-text">
+					6261 ******6429
+					<image src="../../static/upsdk_payment_right.webp" mode=""></image> 
 				</view>
 			</view>
 		</view>
+		<view class="AccountTransfer-money">可用余额: <text>人民币元 0.00</text></view>
 		<view class="AccountTransfer-btn">
 			下一步
 		</view>
@@ -90,7 +84,6 @@
 		.repayment-Account{
 			width: 90%;
 			margin: 0 auto;
-			margin-top: 20rpx;
 			background-color: #fff;
 			display: flex;
 			align-items: center;
@@ -144,6 +137,7 @@
 			width: 90%;
 			padding: 25rpx;
 			margin: 0 auto;
+			margin-top: 20rpx;
 			background-color: #fff;
 			p{
 				font-size: 25rpx;

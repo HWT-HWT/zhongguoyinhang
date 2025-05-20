@@ -185,6 +185,20 @@
 			{
 				"navigationBarTitleText" : ""
 			}
+		},
+		{
+			"path" : "pages/transferPhone/transferPhone",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/AccountOverview/AccountOverview",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
 		}
 		
 	],

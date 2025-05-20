@@ -18,7 +18,7 @@
 				</view>
 				<view class="Text">
 					<p>可用额度(人民币元)</p>
-					<span>{{Credit.remaining }}</span>
+					<span>{{Credit.remaining}}</span>
 				</view>
 			</view>
 		</view>
