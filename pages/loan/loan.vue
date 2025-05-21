@@ -47,6 +47,9 @@
 		},
 		onPageScroll(Scroll) {
 			this.scrollTop =  Scroll.scrollTop
+		},
+		onLoad(parma){
+			this.TaberIndex = +parma.id || 0
 		}
 	}
 </script>

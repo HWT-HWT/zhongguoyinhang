@@ -24,8 +24,8 @@
 					<span class="none">900,000.00</span>
 				</view>
 				<view class="Row" style="border: none;">
-					<view class="p">2025/06/08应还</view>
-					<span  class="none">6,259.82</span>
+					<view class="p">2025/06/01应还</view>
+					<span  class="none">6,518.09</span>
 				</view>
 				<image class="image" src="../../static/upsdk_payment_right.webp" mode=""></image>
 			</view>
@@ -68,9 +68,16 @@
 		},
 		methods:{
 			Next(){
-				uni.navigateTo({
-					url:'/pages/LoanDataliTow/LoanDataliTow'
-				})
+				if(this.id == 1){
+					uni.navigateTo({
+						url:'/pages/LoanDataliTow/LoanDataliTow'
+					})
+				}else{
+					uni.navigateTo({
+						url:'/pages/datalis/datalis'
+					})
+				}
+				
 			}
 		}
 	}

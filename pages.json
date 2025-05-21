@@ -199,6 +199,13 @@
 			{
 				"navigationBarTitleText" : ""
 			}
+		},
+		{
+			"path" : "pages/datalis/datalis",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
 		}
 		
 	],

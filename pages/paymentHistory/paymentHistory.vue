@@ -7,7 +7,7 @@
 			</backtaberVue>
 		</view>
 		<view class="Loan-Datali-Tabs">
-		 	<z-tabs ref="tabs" :list="IsTrue ? tabListOne :tabList " :current="current" active-color="#e82e4a" @change="tabsChange" />
+		 	<z-tabs ref="tabs" :list="tabListOne" :current="current" active-color="#e82e4a" @change="tabsChange" />
 		</view>
 		<remainingVue v-if="current === 0" :IsTrue='IsTrue'></remainingVue>
 		<historyVue v-if="current === 1"  :IsTrue='IsTrue'></historyVue>
@@ -27,9 +27,9 @@
 				TitleImage:"../../static/back_black.png",
 				rigthIcon:['../../static/boc_folder_title_service.png'],
 				tabList: ['剩余','历史','逾期'],
-				tabListOne: ['待还款','已还款','逾期贷还款'],
+				tabListOne: ['待还款','已还款','逾期待还款'],
 				current: 0,
-				IsTrue:true
+				IsTrue:''
 				
 			};
 		},
@@ -49,8 +49,9 @@
 			
 		},
 		onLoad(query) {
-			this.IsTrue = query.isTrue ? true : false ;
- 			console.log(this.IsTrue);
+			console.log(query.isTrue);
+			this.IsTrue = query.isTrue == 2 ? false : true
+			console.log(this.IsTrue);
 		}
 	}
 </script>
@@ -61,10 +62,13 @@
 		height: 100vh;
 		background-color: #f4f4f4;
 		.Loan-Datali-Tab{
+			width: 100%;
 			background-color: #fff;
+			// position: fixed;
+			// top: 0;
 		}
 		.Loan-Datali-Tabs{
-			padding:0 100rpx;
+			padding:0 50rpx;
 			margin: 0 auto;
 			background-color: #fff;
 		}

@@ -8,14 +8,14 @@
 				惠如愿·E抵贷
 			</view>
 			<view class="drawMoney-Number">
-				贷款额度号 PF446330000020201608283
+				贷款额度号 PF355470000046878744084
 			</view>
 		</view>
 		<view class="drawMoney-ListView">
 			<view class="ListView-text">
 				<p>可用额度(元)</p>
 				<view class="money">0.00</view>
-				<view class="date">2034/10/25到期 年化利率3.36%起 <image src="@/static/boc_finance_gray_help.png" mode=""></image> </view>
+				<view class="date">2034/10/25到期 年化利率3.45%起 <image src="@/static/boc_finance_gray_help.png" mode=""></image> </view>
 			</view>
 			<view class="ListView-btn">
 				<!-- <span>用款</span> -->
@@ -27,17 +27,17 @@
 		</view>
 		<view class="drawMoney-List">
 			<view class="List-title">
-				<span>2024/06/24</span>
-				<span class="money">用款 600,000.00</span>
+				<span>2024/11/08</span>
+				<span class="money">用款:900,000.00</span>
 			</view>
-			<view class="assets-Datali">
+			<view class="assets-Datali" @click="GoLoanDataliTow">
 				<view class="Row">
 					<view class="p">还款日</view>
-					<span class="none">2025/04/03</span>
+					<span class="none">2025/06/01</span>
 				</view>
 				<view class="Row" style="border: none;">
 					<view class="p">应还</view>
-					<span  class="none">6,259.82</span>
+					<span  class="none">6,518.09</span>
 				</view>
 			</view>
 		</view>
@@ -62,6 +62,11 @@
 			Next(){
 				uni.navigateTo({
 					url:'/pages/more/more'
+				})
+			},
+			GoLoanDataliTow(){
+				uni.navigateTo({
+					url:'/pages/LoanDataliTow/LoanDataliTow'
 				})
 			}
 		}
@@ -160,7 +165,7 @@
 			padding-bottom: 20rpx;
 			margin-top: 20rpx;
 			.List-title{
-				background-color: #f4f4f4;
+				background-color: #f1f1f1;
 				padding:10rpx;
 				font-size: 30rpx;
 				display: flex;
@@ -178,12 +183,12 @@
 				.Row{
 					display: flex;
 					align-items: center;
-					border-right: 1px solid #ddd;
 					flex-wrap: wrap;
 					width: 50%;
 					line-height:40rpx;
 					padding-left: 50rpx;
 					justify-content: center;
+					align-items: center;
 					.p{
 						display: flex;
 						align-items: center;
@@ -201,6 +206,10 @@
 						margin-top: 10rpx;
 						font-weight: bold;
 					}
+				}
+				image{
+					width: 80rpx;
+					height: 60rpx;
 				}
 			}
 		}

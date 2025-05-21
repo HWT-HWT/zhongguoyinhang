@@ -48,7 +48,7 @@
 			<view class="MyAssets-View">
 				<view class="Row">
 					<view class="ListView" @click="GoAssets">资产 <image src="@/static/upsdk_payment_right.webp" mode=""></image> </view>
-					<span>{{MyAssetsEye ? '******' : '2.00'}}</span>
+					<span>{{MyAssetsEye ? '******' : '18,600.00'}}</span>
 				</view>
 				<view class="Row">
 					<view class="ListView">昨日收益 <image src="@/static/upsdk_payment_right.webp" mode=""></image> </view>
@@ -66,7 +66,7 @@
 			<view class="MyAssets-View">
 				<view class="Row">
 					<view class="ListView">收入</view>
-					<span>{{MyAssetsEye ? '******' : '0.00'}}</span>
+					<span>{{MyAssetsEye ? '******' : '5,850.25'}}</span>
 				</view>
 				<view class="Row">
 					<view class="ListView">支出</view>
@@ -82,12 +82,12 @@
 			</TitleVue>
 		</view>
 		
-		<view class="user-Outlets-loan">
+		<view class="user-Outlets-loan" @click="GoLoan">
 			<view class="p">贷款本金总余额(人民币元) <image src="@/static/boc_finance_gray_help.png" mode=""></image> </view>
 			<span>1,100,000.00</span>
 		</view>
 		
-		<view class="user-Outlets-title">
+		<!-- <view class="user-Outlets-title">
 			<TitleVue LFontSize="38" :icon="true" IconSize="2">
 				<template #left>
 					我的网点
@@ -115,7 +115,7 @@
 					{{item}}
 				</view>
 			</view>
-		</view>
+		</view> -->
 		<view class="user-more">
 			<TitleVue LFontSize="38">
 				<template #left>
@@ -195,6 +195,11 @@
 			GoAssets(){
 				uni.navigateTo({
 					url:'/pages/assets/assets'
+				})
+			},
+			GoLoan(){
+				uni.navigateTo({
+					url:'/pages/loan/loan?id=4'
 				})
 			}
 		},

@@ -40,7 +40,7 @@
 			.Optimal-btn{
 				margin-right: 20rpx;
 				height: 45rpx;
-				padding: 0 30rpx;
+				padding: 0 20rpx;
 				border-radius: 40rpx;
 				font-size: 30rpx;
 				background-color: #fef5f6;

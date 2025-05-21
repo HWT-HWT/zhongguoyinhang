@@ -18,7 +18,7 @@
 		<view class="assets-Money">
 			<view class="Row Select">
 				<p>总资产</p>
-				<span>{{Eye ? '******': '3.06'}}</span>
+				<span>{{Eye ? '******': '18,600.00'}}</span>
 			</view>
 			<view class="Row" style="border: none;">
 				<p>总负债</p>

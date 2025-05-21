@@ -9,7 +9,7 @@
 			<image src="@/static/boc_login_logo_inte.png" mode=""></image>
 		</view>
 		<view class="login-Phone">
-			188****7027
+			132****8145
 		</view>
 		 <gesturePassword @change="gestureChange" ref="childRef" ></gesturePassword>
 	</view>

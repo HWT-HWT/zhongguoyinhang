@@ -1,7 +1,7 @@
 <template>
 	<view class="drawMoney">
 		<view class="drawMoney-tbas">
-			<loanTitleVue name="随心智贷" :TitleImage='TitleImage' :rigthIcon='rigthIcon'></loanTitleVue>
+			<loanTitleVue name="随心智贷" :TitleImage='TitleImage' :rigthIcon='rigthIcon' :Scollor="scrollTop"></loanTitleVue>
 		</view>
 		<view class="drawMoney-ListView">
 			<view class="ListView-text">
@@ -10,49 +10,130 @@
 				<view class="date">年利率(单利)3.4% <image src="@/static/boc_finance_gray_help.png" mode=""></image> | 2027/11/08到期 </view>
 			</view>
 		</view>
-		<view class="drawMoney-bill">
-			待还款,共1笔
+		
+		
+		<swiper :indicator-dots="true" :autoplay="false" :interval="3000" :duration="1000">
+			<swiper-item>
+				<view class="FeelFreeLoan-ListView">
+					<ListView :listTitle='FeelFreeLoanlist' :Pad="'30rpx 0'" FontSize="20rpx" sizi='50rpx' @ClickNext='GoNext'></ListView>
+				</view>
+			</swiper-item>
+			<swiper-item>
+				<view class="FeelFreeLoan-ListView">
+					<ListView :listTitle='FeelFreeLoanlistTow' :Pad="'30rpx 0'" FontSize="20rpx" sizi='50rpx'></ListView>
+				</view>
+			</swiper-item>
+		</swiper>
+		
+		<view class="drawMoney-guangao">
+			<image src="../../static/FeelFreeLoan-bg-1.png" mode=""></image>
+			<view class="guangao">
+				<p>分享功能给好友</p> 
+				<view>随心智贷 最高可借50w <image src="@/static/upsdk_mp_help.webp" mode=""></image> </view>
+			</view>
+			<view class="btn" >
+				去邀请
+			</view>
 		</view>
+		
+		<view class="drawMoney-guangao" style="background-color: #f3faff;">
+			<image src="../../static/FeelFreeLoan-bg-2.png" mode=""></image>
+			<view class="guangao">
+				<p>获取有惊喜</p> 
+				<view>贷款热门活动</view>
+			</view>
+			<view class="btn" style="border:1px solid #61a1f5;color: #1572f0;">
+				去看看
+			</view>
+		</view>
+		
 		<view class="drawMoney-List">
 			<view class="List-title">
-				<span>2024/06/24</span>
-				<span class="money">用款 600,000.00</span>
+				<span>待还款,共1笔</span>
+				<span class="money">单位:人民币</span>
 			</view>
-			<view class="assets-Datali">
+			<view class="assets-Datali" @click="Next">
 				<view class="Row">
-					<view class="p">还款日</view>
-					<span class="none">2025/04/03</span>
+					<view class="p">2024/11/13用款</view>
+					<span class="none">200,000.00</span>
 				</view>
 				<view class="Row" style="border: none;">
-					<view class="p">应还</view>
-					<span  class="none">6,259.82</span>
+					<view class="p">2025/06/11应还</view>
+					<span  class="none">585.56</span>
 				</view>
+				<image src="../../static/upsdk_payment_right.webp" mode=""></image>
 			</view>
 		</view>
-		
-		
 	</view>
 </template>
 
 <script>
 	import loanTitleVue from '../../components/loan-Title.vue';
+	import ListView from '@/components/ListView.vue'
 	export default {
 		data() {
 			return {
 				TitleImage:"../../static/back_black.png",
 				rigthIcon:['../../static/boc_folder_title_service.png','../../static/icon_share_black.png'],
+				FeelFreeLoanlist:[
+					{name:'额度详情',icon:'../../static/LoanDataliTow-icon-1.png'},
+					{name:'提前还款',icon:'../../static/LoanDataliTow-icon-2.png'},
+					{name:'变更还款账户',icon:'../../static/LoanDataliTow-icon-3.png'},
+					{name:'查看合同',icon:'../../static/LoanDataliTow-icon-4.png'},
+					{name:'用款申请进度',icon:'../../static/LoanDataliTow-icon-5.png'},
+				],
+				FeelFreeLoanlistTow:[
+					{name:'已结清贷款',icon:'../../static/LoanDataliTow-icon-6.png'},
+					{name:'贷款机构',icon:'../../static/LoanDataliTow-icon-7.png'},
+				],
+				CreditB:{
+					TotalBalance:'200,000.00',
+					Money:'200,000.00',
+					remaining:'0.00',
+					Credit:[
+						{name:'还款账户',text:'6216 ****** 6429',menu:'更改'},
+						{name:'还款日',text:'每月11日'},
+						{name:'年利率(单利)',text:'3.4%'},
+						{name:'额度到期日',text:'2027/11/08'},
+						{name:'贷款额度号',text:'PF533850000047334650473'},
+						{name:'额度状态',text:'生效'},
+						{name:'贷款机构名称',text:'中国银行广州大岭支行'},
+						{name:'贷款机构地址',text:'广州市南沙区江南路110号首层、二层'},
+						{name:'贷款机构电话',text:'02084987481'},
+					],
+				},
+				scrollTop:0
 			};
 		},
 		components:{
-			loanTitleVue
+			loanTitleVue,
+			ListView
 		},
 		methods:{
 			Next(){
 				uni.navigateTo({
-					url:'/pages/more/more'
+					url:'/pages/LoanDataliTow/LoanDataliTow?id=2'
 				})
+			},
+			GoNext(index){
+				if(index === 0){
+					uni.setStorageSync('Credit',this.CreditB),
+					uni.navigateTo({
+						url:'/pages/CreditDetails/CreditDetails'
+					})
+				}
+				index === 1 ? uni.navigateTo({
+					url:'/pages/Repayment/Repayment'
+				}) : ''
+				
+				index === 3 ? uni.navigateTo({
+					url:'/pages/contract/contract'
+				}) : ''
 			}
-		}
+		},
+		onPageScroll(Scroll) {
+			this.scrollTop =  Scroll.scrollTop
+		},
 	}
 </script>
 
@@ -152,6 +233,8 @@
 			padding-bottom: 20rpx;
 			margin-top: 20rpx;
 			.List-title{
+				display: flex;
+				justify-content: space-between;
 				background-color: #f4f4f4;
 				padding:10rpx;
 				font-size: 30rpx;
@@ -167,10 +250,10 @@
 				color: #000;
 				display: flex;
 				margin-top: 20rpx;
+				align-items: center;
 				.Row{
 					display: flex;
 					align-items: center;
-					border-right: 1px solid #ddd;
 					flex-wrap: wrap;
 					width: 50%;
 					line-height:40rpx;
@@ -194,7 +277,69 @@
 						font-weight: bold;
 					}
 				}
+				image{
+					width: 80rpx;
+					height: 60rpx;
+					padding: 20rpx;
+				}
 			}
 		}
+		swiper{
+			/deep/.uni-swiper-dot{
+				// display: none;
+				width: 15rpx;
+				height: 5rpx;
+				border-radius: 5rpx;
+			}
+			height: 150rpx;
+			.FeelFreeLoan-ListView{
+			}
+		}
+		.drawMoney-guangao{
+			width: 95%;
+			border-radius: 20rpx;
+			margin: 0 auto;
+			margin-top: 20rpx;
+			background-color: #fff5e2;
+			display: flex;
+			align-items: center;
+			image{
+				padding: 20rpx;
+				width: 90rpx;
+				height: 90rpx;
+			}
+			.guangao{
+				flex: 1;
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				font-size: 28rpx;
+				p{
+					font-weight: bold;
+				}
+				view{
+					display: flex;
+					margin-top: 10rpx;
+					align-items: center;
+					font-size: 25rpx;
+					width: 100%;
+				}
+				image{
+					padding:0;
+					width: 30rpx;
+					height: 30rpx;
+					margin-left: 10rpx;
+				}
+			}
+			.btn{
+				font-size: 25rpx;
+				border: 1px solid #faa88e;
+				color: #f65938;
+				padding: 10rpx 20rpx;
+				border-radius: 50rpx;
+				margin-right: 20rpx;
+			}
+		}
+		
 	}
 </style>

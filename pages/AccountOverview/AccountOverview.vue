@@ -8,8 +8,8 @@
 				<p>总资产(折算人民币元)</p>
 				<image src="@/static/boc_finance_eye_open.png" mode=""></image>
 			</view>
-			<view class="money">
-				2.00 <image src="../../static/upsdk_payment_right.webp" mode=""></image>
+			<view class="money" @click="Next">
+				18,600.00 <image src="../../static/upsdk_payment_right.webp" mode=""></image>
 			</view>
 			<view class="Footer">
 				<p>昨日收益(元)暂无收益</p>
@@ -92,6 +92,13 @@
 		},
 		components:{
 			loanTitleVue
+		},
+		methods:{
+			Next(){
+				uni.navigateTo({
+					url:'/pages/assets/assets'
+				})
+			}
 		}
 	}
 </script>
@@ -177,6 +184,7 @@
 				height: 80rpx;
 			}
 			.card-number{
+				flex: 1;
 				margin-left: 20rpx;
 				p{
 					font-size: 25rpx;
@@ -187,7 +195,6 @@
 				}
 			}
 			text{
-				margin-left: 160rpx;
 				font-size: 25rpx;
 				color:#376fd3 ;
 			}
