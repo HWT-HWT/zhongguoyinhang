@@ -233,17 +233,17 @@
 			}
 			.active{
 				.dot-outer{
-					background-color: #A6D3E0 !important;
+					background-color: #a8cbf9 !important;
 				}
 				.dot{
-					background-color: #039CDF !important;
+					background-color: #0066ef !important;
 				}
 			}
 		}
 		.line-segment{
 			height: 5rpx;
 			position: absolute;
-			background-color: #0295d3;
+			background-color: #0066ef;
 			transform-origin: 0 50% 0;
 		}
 	}

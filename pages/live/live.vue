@@ -3,13 +3,13 @@
 		<view class="live-title">
 			<occupyVue :hight="'90rpx'"></occupyVue>
 			<HeadTitleVue :menu='TitleMenu'  :IconSize="HeaderIconSize"  Icon="../../static/icon_new_life_white_location.png" :isTrue="false">
-				佛山
+				--
 			</HeadTitleVue>
 		</view>
 		<view class="live-Scroll-Title" v-if="!ScrollTop == 0" :style="{opacity:`${ScrollTop / 100 }`}">
 			<occupyVue :hight="'90rpx'"></occupyVue>
 			<HeadTitleVue :menu='TitleMenuBlack' TextColor="#000" :IconSize="HeaderIconSize"  Icon="../../static/icon_new_life_location.png" :isTrue="false" >
-				佛山
+				--
 			</HeadTitleVue>
 		</view>
 		<view class="live-Swiper">

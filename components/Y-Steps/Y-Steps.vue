@@ -8,7 +8,7 @@
 					<view class="">
 						{{index + 1 + '期'}}
 					</view>
-					<text>{{i.time}}</text>
+					<text>{{ i.date }}</text>
 				</view>
 				<view class="s_r">
 					<view class="index" :style="{backgroundColor:'#555000',color:color}">
@@ -18,9 +18,9 @@
 				<view class="s_l">
 					<view class="info_item" @tap="topage(index)">
 						<view class="info_item_text"> 
-							<text>{{ i.date }}</text>
+							<text>{{ i.Money[0] }}</text>
 						</view> 
-						<view :style="{WebkitLineClamp:lineNum!=0?lineNum:'','color':'#888','fontSize':'22rpx'}">{{ i.info }}</view>
+						<view :style="{WebkitLineClamp:lineNum!=0?lineNum:'','color':'#888','fontSize':'22rpx'}">{{ i.Money[1] }}</view>
 					</view>
 				</view>
 			</view>

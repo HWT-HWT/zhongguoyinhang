@@ -469,7 +469,8 @@
 				}
 				image{
 					width: 90%;
-					height: 320rpx;
+					height: 300rpx;
+					padding-bottom: 20rpx;
 				}
 			}
 		}

@@ -63,6 +63,9 @@
 				</view>
 				<image src="../../static/upsdk_payment_right.webp" mode=""></image>
 			</view>
+			<view class="btn" @click="GOPaymentRecords">
+				查看更多
+			</view>
 		</view>
 	</view>
 </template>
@@ -129,6 +132,11 @@
 				index === 3 ? uni.navigateTo({
 					url:'/pages/contract/contract'
 				}) : ''
+			},
+			GOPaymentRecords(){
+				uni.navigateTo({
+					url:'/pages/PaymentRecords/PaymentRecords?id=3'
+				})
 			}
 		},
 		onPageScroll(Scroll) {
@@ -282,6 +290,14 @@
 					height: 60rpx;
 					padding: 20rpx;
 				}
+			}
+			.btn{
+				margin-top: 20rpx;
+				padding-top: 20rpx;
+				text-align: center;
+				border-top:1px solid #ddd ;
+				font-size: 25rpx;
+				color: #1572f0;
 			}
 		}
 		swiper{

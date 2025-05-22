@@ -30,7 +30,7 @@
 				<image class="image" src="../../static/upsdk_payment_right.webp" mode=""></image>
 			</view>
 			
-			<view class="assets-Datali" @click="Next()" v-if='this.id == 2'>
+			<view class="assets-Datali" @click="Next(id)" v-if='this.id == 2 || this.id == 3'>
 				<view class="Row">
 					<view class="p">2024/11/13用款</view>
 					<span class="none">200,000.00</span>
@@ -42,7 +42,7 @@
 				<image class="image" src="../../static/upsdk_payment_right.webp" mode=""></image>
 			</view>
 			
-			<view class="footView">
+			<view class="footView" @click="goSettle" v-if="this.id == 3 || this.id == 1">
 				查看已结清
 			</view>
 		</view>
@@ -67,7 +67,12 @@
 			console.log(this.id);
 		},
 		methods:{
-			Next(){
+			Next(id){
+				if(id == 3){
+					return uni.navigateTo({
+						url:'/pages/LoanDataliTow/LoanDataliTow?id=2'
+					})
+				}
 				if(this.id == 1){
 					uni.navigateTo({
 						url:'/pages/LoanDataliTow/LoanDataliTow'
@@ -78,6 +83,11 @@
 					})
 				}
 				
+			},
+			goSettle(){
+				uni.navigateTo({
+					url:'/pages/settle/settle'
+				})
 			}
 		}
 	}
