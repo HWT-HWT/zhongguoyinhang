@@ -214,13 +214,13 @@
 			swiper{
 				width: 100%;
 				height: 100%;
-				/deep/.uni-swiper-dot{
+				::v-deep.uni-swiper-dot{
 					width: 10rpx;
 					height: 5rpx;
 					border-radius: 10rpx;
 					background-color: #f7f7f7;
 				}
-				/deep/.uni-swiper-dot-active{
+				::v-deep.uni-swiper-dot-active{
 					width: 20rpx;
 					height: 5rpx;
 					border-radius: 10rpx;

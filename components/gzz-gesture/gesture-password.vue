@@ -201,7 +201,10 @@
 		height: 600rpx;
 		position: relative;
 		margin: 0 auto;
-		
+		touch-action: none;/* 禁用默认触摸行为 */
+		/* 新增：处理iOS橡皮筋效果 */
+		-webkit-overflow-scrolling: auto !important;
+		overscroll-behavior-y: contain;
 		.points{
 			width: 100%;
 			height: 100%;

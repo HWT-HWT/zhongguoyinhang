@@ -18,15 +18,19 @@
 <script>
 	import occupyVue from '../../components/occupy.vue';
 	import gesturePassword from '@/components/gzz-gesture/gesture-password.vue';
+	import loanTitleVue from '../../components/loan-Title.vue';
 	export default {
 		data() {
 			return {
-				date:''
+				date:'',
+				TitleImage:"../../static/back_black.png",
+				rigthIcon:['../../static/boc_folder_title_service.png','../../static/icon_share_black.png'],
 			};
 		},
 		components:{
 			gesturePassword,
-			occupyVue
+			occupyVue,
+			loanTitleVue
 		},
 		methods:{
 			refreshPage() {
@@ -119,8 +123,16 @@
 
 <style lang="scss" scoped>
 	.login{
-		width: 100vw;
-		height: 100vh;
+		 width: 100vw;
+		  min-height: 100vh;
+		  overflow: hidden; /* 关键：禁止页面整体滚动 */
+		  position: fixed;  /* 防止iOS地址栏收放导致布局抖动 */
+		  top: 0;
+		  left: 0;
+		  
+		  /* 新增：处理iOS橡皮筋效果 */
+		  -webkit-overflow-scrolling: auto !important;
+		  overscroll-behavior-y: contain;
 		.login-back{
 			display: flex;
 			flex-wrap: wrap;

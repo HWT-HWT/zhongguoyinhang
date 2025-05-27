@@ -313,6 +313,11 @@
 				this.token = uni.getStorageSync('account')
 			},
 			Next(index){
+				console.log(!uni.getStorageSync('account').token);
+				if(!uni.getStorageSync('account').token){
+					return
+				}
+				
 				index === 0 ? uni.navigateTo({
 					url:'/pages/AccountTransfer/AccountTransfer'
 				}) : ''
@@ -354,6 +359,7 @@
 		background: url('../../static/index-bg-1.png') no-repeat;
 		background-size:100% 500rpx;
 		.index-Scroll-Title{
+			width: 100vw;
 			background-color: #fff;
 			position: fixed;
 			top: 0;
@@ -422,13 +428,13 @@
 			swiper{
 				width: 100%;
 				height: 100%;
-				/deep/.uni-swiper-dot{
+				::v-deep.uni-swiper-dot{
 					width: 10rpx;
 					height: 5rpx;
 					border-radius: 10rpx;
 					background-color: #f7f7f7;
 				}
-				/deep/.uni-swiper-dot-active{
+				::v-deep.uni-swiper-dot-active{
 					width: 20rpx;
 					height: 5rpx;
 					border-radius: 10rpx;

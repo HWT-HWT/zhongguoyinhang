@@ -301,7 +301,7 @@
 			}
 		}
 		swiper{
-			/deep/.uni-swiper-dot{
+			::v-deep.uni-swiper-dot{
 				// display: none;
 				width: 15rpx;
 				height: 5rpx;
