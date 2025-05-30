@@ -10,7 +10,7 @@
 				<image src="../../static/upsdk_payment_right.webp" mode=""></image> 
 			</view>
 		</view>
-		<view class="AccountTransfer-money">可用余额: <text>人民币元 0.00</text></view>
+		<view class="AccountTransfer-money">可用余额: <text>人民币元 51,602.48</text></view>
 		<view class="repayment-Type">
 			<p>币种</p>
 			<view class="image-text">
@@ -146,7 +146,7 @@
 			margin: 0 auto;
 			background-color: #fff;
 			p{
-				font-size: 25rpx;
+				font-size: 32rpx;
 				font-weight: bold;
 			}
 			input{
@@ -167,11 +167,11 @@
 				align-items: center;
 				p{
 					width: 25%;
-					font-size: 28rpx;
+					font-size: 32rpx;
 					font-weight: bold;
 				}
 				input{
-					font-size: 28rpx;
+					font-size: 32rpx;
 					margin-right: 50rpx;
 				}
 				.icon{

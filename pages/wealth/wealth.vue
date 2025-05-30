@@ -15,7 +15,7 @@
 		<view class="Wealth-Balance">
 			<p>总资产(折算人民币元)</p>
 			<span v-if='!token'>登录查看 <image src="../../static/boc_arrow_right_white.png" mode=""></image> </span>
-			<span v-else>18,600.00 <image src="../../static/boc_arrow_right_white.png" mode=""></image> </span>
+			<span v-else>51,602.48 <image src="../../static/boc_arrow_right_white.png" mode=""></image> </span>
 		</view>
 		<view class="Wealth-List">
 			<ListViewVue :listTitle='ViewList' :Pad="'30rpx 0'" FontSize="25rpx"></ListViewVue>

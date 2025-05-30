@@ -48,7 +48,7 @@
 				</view>
 			</view>
 		</view>
-		<view class="AccountTransfer-money">可用余额: <text>人民币元 0.00</text></view>
+		<view class="AccountTransfer-money">可用余额: <text>人民币元 51,602.48</text></view>
 		<view class="AccountTransfer-btn">
 			下一步
 		</view>
@@ -89,6 +89,7 @@
 			align-items: center;
 			justify-content: space-between;
 			padding: 25rpx;
+			font-size: 32rpx;
 			p{
 				font-weight: bold;
 			}
@@ -140,7 +141,7 @@
 			margin-top: 20rpx;
 			background-color: #fff;
 			p{
-				font-size: 25rpx;
+				font-size: 32rpx;
 				font-weight: bold;
 			}
 			input{
@@ -160,12 +161,12 @@
 				justify-content: space-between;
 				align-items: center;
 				p{
-					width: 25%;
-					font-size: 28rpx;
+					width: 30%;
+					font-size: 32rpx;
 					font-weight: bold;
 				}
 				input{
-					font-size: 28rpx;
+					font-size: 30rpx;
 					margin-right: 50rpx;
 				}
 				.icon{

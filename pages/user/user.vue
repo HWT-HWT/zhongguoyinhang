@@ -1,5 +1,5 @@
 <template>
-	<view class="user">
+	<view class="user" v-if="token">
 		<view class="user-title">
 			<occupyVue :hight="'90rpx'"></occupyVue>
 			<HeadTitleVue :menu='TitleMenu' :Icon='Icon' :isTrue="false" >
@@ -48,7 +48,7 @@
 			<view class="MyAssets-View">
 				<view class="Row">
 					<view class="ListView" @click="GoAssets">资产 <image src="@/static/upsdk_payment_right.webp" mode=""></image> </view>
-					<span>{{MyAssetsEye ? '******' : '18,600.00'}}</span>
+					<span>{{MyAssetsEye ? '******' : '51,602.48'}}</span>
 				</view>
 				<view class="Row">
 					<view class="ListView">昨日收益 <image src="@/static/upsdk_payment_right.webp" mode=""></image> </view>
@@ -171,7 +171,8 @@
 				MyAssetsEye:false,
 				OutletsFooter:['立即取号','外币现钞预约','卡片挂失'],
 				Footer:['隐私政策','关于我们','投诉渠道'],
-				date:''
+				date:'',
+				token:''
 			};
 		},
 		components:{
@@ -189,7 +190,7 @@
 			},
 			Next(index){
 				index === 0 ? uni.navigateTo({
-					url:'/pages/Account/Account'
+					url:'/pages/AccountOverview/AccountOverview'
 				}) : ''
 			},
 			GoAssets(){
@@ -204,6 +205,7 @@
 			}
 		},
 		onShow() {
+			this.token = uni.getStorageSync('account')
 			if(!uni.getStorageSync('account')){
 				uni.navigateTo({
 					url:'/pages/gesture/gesture'

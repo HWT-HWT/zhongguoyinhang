@@ -68,7 +68,7 @@
 			</view>
 		</view>
 		
-		<view class="foot-View">
+		<view class="foot-View" @click="GoMoney">
 			提前还款
 		</view>
 	</view>
@@ -140,6 +140,11 @@
 			Click(index){
 				uni.navigateTo({
 					url:`/pages/paymentHistory/paymentHistory?isTrue=${index}`
+				})
+			},
+			GoMoney(){
+				uni.navigateTo({
+					url:`/pages/Repayment/Repayment`
 				})
 			}
 		},

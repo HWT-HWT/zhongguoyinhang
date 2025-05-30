@@ -1,10 +1,7 @@
 <template>
 	<view class="payment-history">
 		<view class="Loan-Datali-Tab">
-			<occupyVue hight="90rpx"></occupyVue>
-			<backtaberVue :TitleImage='TitleImage' :rigthIcon='rigthIcon' :RightMax='1' :isText='false' Color="#000">
-				还款记录 
-			</backtaberVue>
+			<loanTitleVue :name="'还款记录'" :TitleImage='TitleImage' :rigthIcon='rigthIcon' :Scollor="TopTitle"></loanTitleVue>
 		</view>
 		<view class="Loan-Datali-Tabs">
 		 	<z-tabs ref="tabs" :list="tabListOne" :current="current" active-color="#e82e4a" @change="tabsChange" />
@@ -16,8 +13,7 @@
 </template>
 
 <script>
-	import occupyVue from '../../components/occupy.vue'
-	import backtaberVue from '../../components/backtaber.vue'
+	import loanTitleVue from '../../components/loan-Title.vue';
 	import remainingVue from '../../components/remaining.vue';
 	import historyVue from '../../components/history.vue';
 	import overdueVue from '../../components/overdue.vue';
@@ -29,13 +25,12 @@
 				tabList: ['剩余','历史','逾期'],
 				tabListOne: ['待还款','已还款','逾期待还款'],
 				current: 0,
-				IsTrue:''
-				
+				IsTrue:'',
+				TopTitle:''
 			};
 		},
 		components:{
-			occupyVue,
-			backtaberVue,
+			loanTitleVue,
 			remainingVue,
 			historyVue,
 			overdueVue
@@ -52,6 +47,9 @@
 			console.log(query.isTrue);
 			this.IsTrue = query.isTrue == 2 ? false : true
 			console.log(this.IsTrue);
+		},
+		onPageScroll(TopTitle) {
+			this.TopTitle = TopTitle.scrollTop
 		}
 	}
 </script>
@@ -59,7 +57,7 @@
 <style lang="scss" scoped>
 	.payment-history{
 		width: 100vw;
-		height: 100vh;
+		min-height: 100vh;
 		background-color: #f4f4f4;
 		.Loan-Datali-Tab{
 			width: 100%;

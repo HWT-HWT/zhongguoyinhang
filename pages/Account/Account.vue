@@ -6,7 +6,7 @@
 		<view class="account-Datali">
 			<view class="Datali-Text">
 				<view class="money">总资产(折算人民币元) <image v-if="Eye" @click="ClickEye" src="@/static/EyeColor.png" mode=""></image>   <image v-else @click="ClickEye" src="@/static/Eye.png" mode=""></image></view>
-				<view class="money p" @click="GoAssets">{{!Eye ? '******': '18,600.00'}} <image src="../../static/upsdk_payment_right.webp" mode=""></image> </view>
+				<view class="money p" @click="GoAssets">{{!Eye ? '******': '51,602.48'}} <image src="../../static/upsdk_payment_right.webp" mode=""></image> </view>
 				<view class="money span" @click="GoAssets">昨日收益(元)暂无收益 <image src="../../static/upsdk_payment_right.webp" mode=""></image> </view>
 			</view>
 			<image src="@/static/upsdk_mp_help.webp" mode=""></image>
@@ -16,7 +16,7 @@
 				<p>中行卡</p>
 				<image src="@/static/boc_reload_black.png" mode=""></image>
 			</view>
-			<CardBox :id="1" :list-btn="['交易明细','转账','买理财']" card-name="0613 ****** 0716" sub-name="长城电子借记卡(II类账户)" money='18,600.00' @Next="Next" :Eye='Eye'></CardBox>
+			<CardBox :id="1" :list-btn="['交易明细','转账','买理财']" card-name="0613 ****** 0716" sub-name="长城电子借记卡(II类账户)" money='51,602.48' @Next="Next" :Eye='Eye'></CardBox>
 			<CardBox :id="2"  :list-btn="['交易明细','转账','买理财']" card-name="6216 ****** 9190" sub-name="长城电子借记卡(I类账户)" money='0.00' @Next="Next" :Eye='Eye'></CardBox>
 		</view>
 		<view class="aoocunt-addCard">

@@ -331,6 +331,9 @@
 			},
 			IconViewIndex(index){
 				console.log(index);
+				if(!uni.getStorageSync('account').token){
+					return
+				}
 				// 跳转转账页面
 				index === 2 ? uni.navigateTo({
 					url:'/pages/transfer/transfer'

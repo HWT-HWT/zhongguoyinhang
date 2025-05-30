@@ -9,7 +9,7 @@
 				<image src="@/static/boc_finance_eye_open.png" mode=""></image>
 			</view>
 			<view class="money" @click="Next">
-				18,600.00 <image src="../../static/upsdk_payment_right.webp" mode=""></image>
+				51,602.48 <image src="../../static/upsdk_payment_right.webp" mode=""></image>
 			</view>
 			<view class="Footer">
 				<p>昨日收益(元)暂无收益</p>
@@ -20,7 +20,7 @@
 			<p>中行卡</p>
 			<image src="@/static/boc_reload_black.png" mode=""></image>
 		</view>
-		<view class="AccountOverview-card">
+		<view class="AccountOverview-card" style="background-color: #fff;">
 			<view class="card-icon">
 				<image src="@/static/AccountOverview-bg-2.png" mode=""></image>
 				<view class="card-number">
@@ -30,10 +30,10 @@
 			</view>
 			<view class="money">
 				<p>账面余额</p>
-				<span>人民币元 <text>0.00</text> </span>
+				<span>人民币元 <text>51,602.48</text> </span>
 			</view>
 			<view class="card-list">
-				<view class="listView" v-for="(item,index) in cardList" :key="index" :style="{borderRight:index === 2 ? 'none':'1px solid #ddd'}">
+				<view class="listView" v-for="(item,index) in cardList" :key="index" :style="{borderRight:index === 2 ? 'none':'1px solid #ddd'}" @click="Getindex(index)">
 					{{item}}
 				</view>
 			</view>
@@ -42,36 +42,8 @@
 			<p>未关联至电子银行账户</p>
 			<image src="@/static/upsdk_mp_help.webp" mode=""></image>
 		</view>
-		<view class="AccountOverview-card">
-			<view class="card-icon">
-				<image src="@/static/AccountOverview-bg-2.png" mode=""></image>
-				<view class="card-number">
-					<p>6217 ****** 0911</p>
-					<span>长城电子借记卡</span>
-				</view>
-				<text>去关联</text>
-			</view>
-		</view>
-		<view class="AccountOverview-card">
-			<view class="card-icon">
-				<image src="@/static/AccountOverview-bg-2.png" mode=""></image>
-				<view class="card-number">
-					<p>6216 ****** 6119</p>
-					<span>长城电子借记卡</span>
-				</view>
-				<text>去关联</text>
-			</view>
-		</view>
-		<view class="AccountOverview-card">
-			<view class="card-icon">
-				<image src="@/static/AccountOverview-bg-2.png" mode=""></image>
-				<view class="card-number">
-					<p>7172 ****** 9244</p>
-					<span>长城电子借记卡</span>
-				</view>
-				<text>去关联</text>
-			</view>
-		</view>
+		
+		<AccountCardVue :list='card' ></AccountCardVue>
 		
 		<view class="AccountOverview-AddCard">
 			<p>+手动添加卡/账户</p>
@@ -82,22 +54,46 @@
 
 <script>
 	import loanTitleVue from '../../components/loan-Title.vue';
+	import AccountCardVue from '../../components/AccountCard.vue';
 	export default {
 		data() {
 			return {
 				TitleImage:"../../static/back_black.png",
 				rigthIcon:['../../static/boc_folder_title_service.png'],
-				cardList:['交易明细','转账','买理财']
+				cardList:['交易明细','转账','买理财'],
+				card:[
+					{
+						number:'6217 ****** 0911',
+						SubNumber:'长城电子借记卡'
+					},
+					{
+						number:'6216 ****** 6119',
+						SubNumber:'长城电子借记卡'
+					},
+					{
+						number:'7172 ****** 9244',
+						SubNumber:'长城电子借记卡'
+					}
+				]
 			};
 		},
 		components:{
-			loanTitleVue
+			loanTitleVue,
+			AccountCardVue
 		},
 		methods:{
 			Next(){
 				uni.navigateTo({
 					url:'/pages/assets/assets'
 				})
+			},
+			Getindex(index){
+				index === 0 ? uni.navigateTo({
+					url:'/pages/AccountDatails/AccountDatails'
+				}) : ''
+				index === 1 ? uni.navigateTo({
+					url:'/pages/AccountTransfer/AccountTransfer'
+				}) : ''
 			}
 		}
 	}
@@ -173,7 +169,6 @@
 		width: 90%;
 		margin: 0 auto;
 		margin-top: 20rpx;
-		background-color: #fff;
 		border-radius: 20rpx;
 		.card-icon{
 			padding: 30rpx;
