@@ -9,7 +9,7 @@
 				<image src="@/static/boc_finance_eye_open.png" mode=""></image>
 			</view>
 			<view class="money" @click="Next">
-				51,602.48 <image src="../../static/upsdk_payment_right.webp" mode=""></image>
+				45,084.39 <image src="../../static/upsdk_payment_right.webp" mode=""></image>
 			</view>
 			<view class="Footer">
 				<p>昨日收益(元)暂无收益</p>
@@ -30,7 +30,7 @@
 			</view>
 			<view class="money">
 				<p>账面余额</p>
-				<span>人民币元 <text>51,602.48</text> </span>
+				<span>人民币元 <text>45,084.39</text> </span>
 			</view>
 			<view class="card-list">
 				<view class="listView" v-for="(item,index) in cardList" :key="index" :style="{borderRight:index === 2 ? 'none':'1px solid #ddd'}" @click="Getindex(index)">

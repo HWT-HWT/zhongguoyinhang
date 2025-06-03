@@ -51,7 +51,7 @@
 				rigthIcon:['../../static/boc_folder_title_service.png','../../static/icon_share_black.png'],
 				LoanRecordsList:[
 					{title:'随心智贷',NextDate:'2025/06/11',Date:'2024/11/13',NextMoney:'585.56',Money:'200,000.00'},
-					{title:'中银E贷·经营贷',NextDate:'2025/06/01',Date:'2024/11/08',NextMoney:'6,518.09',Money:'900,000.00'},
+					{title:'中银E贷·经营贷',NextDate:'2025/07/01',Date:'2024/11/08',NextMoney:'6,517.59',Money:'900,000.00'},
 				]
 			};
 		},

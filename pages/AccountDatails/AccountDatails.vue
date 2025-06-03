@@ -57,6 +57,12 @@
 				TitleImage:"../../static/back_black.png",
 				datails:[
 					{
+						YearMonth:'06月/2025',
+						list:[
+							{Day:'01',week:'周日',title:'贷款还款',balance:'45,084.39',username:'马文超',add:'-6,518.09',color:false},
+						],
+					},
+					{
 						YearMonth:'05月/2025',
 						list:[
 							{Day:'01',week:'周四',title:'贷款还款',balance:'51,602.48',username:'马文超',add:'-6,518.59',color:false},

@@ -24,8 +24,8 @@
 					<span class="none">900,000.00</span>
 				</view>
 				<view class="Row" style="border: none;">
-					<view class="p">2025/06/01应还</view>
-					<span  class="none">6,518.09</span>
+					<view class="p">2025/07/01应还</view>
+					<span  class="none">6,517.59</span>
 				</view>
 				<image class="image" src="../../static/upsdk_payment_right.webp" mode=""></image>
 			</view>
@@ -36,8 +36,8 @@
 					<span class="none">200,000.00</span>
 				</view>
 				<view class="Row" style="border: none;">
-					<view class="p">2025/06/11应还</view>
-					<span  class="none">585.56</span>
+					<view class="p">2025/07/11应还</view>
+					<span  class="none">566.67</span>
 				</view>
 				<image class="image" src="../../static/upsdk_payment_right.webp" mode=""></image>
 			</view>

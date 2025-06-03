@@ -83,9 +83,9 @@
 				TitleImage:"../../static/back_black.png",
 				rigthIcon:['../../static/boc_folder_title_service.png'],
 				LoanDataliList:[
-					{name:'本期还款日',text:'2025/06/01',menu:'还款记录'},
+					{name:'本期还款日',text:'2025/07/01',menu:'还款记录'},
 					{name:'本期截止当前应还利息',text:'672.73'},
-					{name:'本期应还金额',text:'6,518.09'},
+					{name:'本期应还金额',text:'6,517.59'},
 				],
 				LoanDataliView:[
 					{name:'贷款金额',text:'900,000.00'},
@@ -137,7 +137,7 @@
 					url:'/pages/contract/contract'
 				}) : ''
 			},
-			Click(index){
+			Click(index){ 
 				uni.navigateTo({
 					url:`/pages/paymentHistory/paymentHistory?isTrue=${index}`
 				})

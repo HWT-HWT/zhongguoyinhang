@@ -1,7 +1,7 @@
 <template>
 	<view class="payment-history">
 		<view class="Loan-Datali-Tab">
-			<loanTitleVue :name="'还款记录'" :TitleImage='TitleImage' :rigthIcon='rigthIcon' :Scollor="TopTitle"></loanTitleVue>
+			<loanTitleVue :name="'还款记录'" :TitleImage='TitleImage' :rigthIcon='rigthIcon'></loanTitleVue>
 		</view>
 		<view class="Loan-Datali-Tabs">
 		 	<z-tabs ref="tabs" :list="tabListOne" :current="current" active-color="#e82e4a" @change="tabsChange" />

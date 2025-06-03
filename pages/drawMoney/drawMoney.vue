@@ -33,11 +33,11 @@
 			<view class="assets-Datali" @click="GoLoanDataliTow">
 				<view class="Row">
 					<view class="p">还款日</view>
-					<span class="none">2025/06/01</span>
+					<span class="none">2025/07/01</span>
 				</view>
 				<view class="Row" style="border: none;">
 					<view class="p">应还</view>
-					<span  class="none">6,518.09</span>
+					<span  class="none">6,517.59</span>
 				</view>
 			</view>
 		</view>

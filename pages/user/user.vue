@@ -48,7 +48,7 @@
 			<view class="MyAssets-View">
 				<view class="Row">
 					<view class="ListView" @click="GoAssets">资产 <image src="@/static/upsdk_payment_right.webp" mode=""></image> </view>
-					<span>{{MyAssetsEye ? '******' : '51,602.48'}}</span>
+					<span>{{MyAssetsEye ? '******' : '45,084.39'}}</span>
 				</view>
 				<view class="Row">
 					<view class="ListView">昨日收益 <image src="@/static/upsdk_payment_right.webp" mode=""></image> </view>

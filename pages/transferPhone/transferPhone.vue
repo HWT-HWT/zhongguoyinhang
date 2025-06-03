@@ -48,7 +48,7 @@
 				</view>
 			</view>
 		</view>
-		<view class="AccountTransfer-money">可用余额: <text>人民币元 51,602.48</text></view>
+		<view class="AccountTransfer-money">可用余额: <text>人民币元 45,084.39</text></view>
 		<view class="AccountTransfer-btn">
 			下一步
 		</view>
